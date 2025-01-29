@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+     <!-- Background Image -->
+     <ImageView
+         android:id="@+id/background_image"
+         android:layout_width="412dp"
+         android:layout_height="280dp"
+         android:src="@drawable/city"
+         android:scaleType="centerCrop"
+         android:layout_centerHorizontal="true" />
+
+     <!-- Circular Profile Icon -->
+     <ImageView
+         android:id="@+id/profile_icon"
+         android:layout_width="100dp"
+         android:layout_height="100dp"
+         android:src="@drawable/ardi"
+         android:scaleType="centerCrop"
+         android:clipToOutline="true"
+         android:layout_below="@id/background_image"
+         android:layout_alignStart="@id/background_image"
+         android:layout_marginStart="16dp"
+         android:layout_marginTop="-50dp" />
+
+     <!-- Table Layout for My Application, Name, and Logout Button -->
+     <TableLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:layout_below="@id/background_image"
+         android:layout_toEndOf="@id/profile_icon"
+         android:layout_marginStart="8dp">
+
+          <!-- First Row (My Application) -->
+          <TableRow>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="My Application"
+                   android:textSize="14sp"
+                   android:textColor="@android:color/holo_orange_dark"
+                   android:layout_marginBottom="4dp" />
+          </TableRow>
+
+          <!-- Second Row (Ardi Okdianto) -->
+          <TableRow>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Ardi Okdianto"
+                   android:textSize="16sp"
+                   android:textColor="@android:color/black"
+                   android:layout_marginBottom="8dp" />
+          </TableRow>
+     </TableLayout>
+
+     <!-- Logout Button -->
+     <Button
+         android:id="@+id/logout_button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/profile_icon"
+         android:layout_alignParentEnd="true"
+         android:layout_marginTop="-49dp"
+         android:layout_marginEnd="72dp"
+         android:backgroundTint="@android:color/holo_orange_light"
+         android:text="Keluar"
+         android:textColor="@android:color/white"
+         android:textSize="16sp" />
+
+     <!-- New Section: Two Elements Split Horizontally -->
+     <LinearLayout
+         android:id="@+id/intro_and_icons_section"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_below="@id/profile_icon"
+         android:padding="14dp">
+
+          <!-- First Half: Text Paragraph -->
+          <TextView
+              android:id="@+id/introduction_text"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="Hai, nama saya Ardi Okdianto. Saya seorang web developer."
+              android:textSize="14sp"
+              android:textColor="@android:color/black"
+              android:padding="8dp"
+              android:clickable="true"
+              android:focusable="true" />
+
+          <!-- Second Half: Horizontal ScrollView with Icons -->
+          <HorizontalScrollView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:gravity="center"
+                   android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/calculator"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon2"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon3"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon4"
+                        android:layout_marginEnd="8dp" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icon5"
+                        android:layout_marginEnd="8dp" />
+
+               </LinearLayout>
+
+          </HorizontalScrollView>
+
+     </LinearLayout>
+
+     <!-- Target Project TextView at the bottom -->
+     <TextView
+         android:id="@+id/target_project_text"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Target project untuk semester ini :"
+         android:textSize="16sp"
+         android:textColor="@android:color/black"
+         android:layout_below="@id/intro_and_icons_section"
+         android:layout_marginTop="16dp"
+         android:layout_centerHorizontal="true"
+         android:layout_marginStart="20dp"
+         android:layout_marginEnd="20dp"/>
+
+     <!-- Scrollable Section: Icon + Text Items -->
+     <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/target_project_text"
+         android:layout_marginTop="16dp">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_marginStart="12dp">
+
+               <!-- Item 1: Icon + Text -->
+               <LinearLayout
+                   android:id="@+id/item_1"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/calculator"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ini adalah kalkulator aritmatika sederhana"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black" />
+               </LinearLayout>
+
+               <!-- Item 2: Icon + Text -->
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/icon2"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mauris tristique magna nec magna pharetra, a placerat nisi convallis. Integer vitae orci tristique, mollis metus sit amet, convallis nisl. Proin sit amet."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black" />
+               </LinearLayout>
+
+               <!-- Item 3: Icon + Text -->
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/icon3"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sed auctor felis non diam dignissim, et tristique ipsum lacinia. Nulla et erat convallis, tincidunt leo ac, viverra ipsum. Quisque at quam malesuada."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black" />
+               </LinearLayout>
+
+               <!-- Item 4: Icon + Text -->
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/icon4"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vestibulum vel ante sed nisi dictum hendrerit. Curabitur sodales turpis at urna venenatis, vel porttitor enim accumsan. Sed varius nisi a augue convallis."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black" />
+               </LinearLayout>
+
+               <!-- Item 5: Icon + Text -->
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/icon5"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phasellus ac ante eu dui laoreet gravida. Nulla facilisi. Sed posuere, nulla in convallis consequat, lorem felis tristique nisl, ac tempor sapien ante eget."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black" />
+               </LinearLayout>
+
+          </LinearLayout>
+
+     </ScrollView>
+
+</RelativeLayout>
