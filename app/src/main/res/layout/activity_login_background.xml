@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:hint="Username"
+            android:hint="email"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="20sp"
