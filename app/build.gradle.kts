@@ -50,6 +50,7 @@ android {
 }
 
 dependencies {
+    implementation ("androidx.sqlite:sqlite:2.3.1")
     implementation ("net.objecthunter:exp4j:0.4.8")
     implementation ("androidx.compose.ui:ui:1.5.0")
     implementation ("androidx.compose.material3:material3:1.0.0")
