@@ -160,7 +160,7 @@ class Calculator : AppCompatActivity() {
     }
 
     // Navigasi ke MainActivity
-    private fun navigateToMainActivity() {
+    fun navigateToMainActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()

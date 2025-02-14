@@ -193,6 +193,7 @@
 
                <!-- Item 2: Icon + Text -->
                <LinearLayout
+                   android:id="@+id/item_2"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:orientation="horizontal"
@@ -207,7 +208,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Mauris tristique magna nec magna pharetra, a placerat nisi convallis. Integer vitae orci tristique, mollis metus sit amet, convallis nisl. Proin sit amet."
+                        android:text="Note"
                         android:textSize="14sp"
                         android:textColor="@android:color/black" />
                </LinearLayout>

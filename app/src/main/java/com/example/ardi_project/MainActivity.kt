@@ -52,8 +52,7 @@ fun MainActivityContent() {
     val context = LocalContext.current
     val dbHelper = DatabaseHelper(context)
     Surface(
-        modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
+        modifier = Modifier.fillMaxSize()
     ) {
         Column(
             modifier = Modifier
@@ -93,6 +92,13 @@ fun MainActivityContent() {
                             val intent = Intent(context, Calculator::class.java)
                             context.startActivity(intent)
                         }
+
+                        // Navigasi ke Note
+                        val item2: LinearLayout = findViewById(R.id.item_2)
+                        item2.setOnClickListener {
+                            val intent = Intent(context, NotesActivity::class.java)
+                            context.startActivity(intent)
+                        }
                     }
                 }
             )
@@ -121,6 +127,7 @@ fun PreviewMainActivity() {
         MainActivityContent()
     }
 }
+
 class LoginActivity : AppCompatActivity() {
     private lateinit var sqliteHelper: DatabaseHelper
 

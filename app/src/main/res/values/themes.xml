@@ -1,10 +1,14 @@
 <resources>
-
-    <style name="Theme.Ardi_Project" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Warna utama aplikasi -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_500</item>
+        <item name="colorOnPrimary">@color/purple_700</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/navi</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/teal_200</item>
     </style>
-
 </resources>
