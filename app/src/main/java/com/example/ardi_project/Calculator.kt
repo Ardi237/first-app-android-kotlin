@@ -129,6 +129,12 @@ class Calculator : AppCompatActivity() {
                     editText.setText(currentText.dropLast(1))
                 }
             }
+            "." -> {
+                // Hanya izinkan titik desimal jika angka saat ini belum mengandung "."
+                if (!currentText.contains(".")) {
+                    editText.setText(currentText + buttonText)
+                }
+            }
             else -> editText.setText(currentText + buttonText)
         }
     }
@@ -147,16 +153,23 @@ class Calculator : AppCompatActivity() {
         val currentText = editText.text.toString()
         try {
             val result = evaluateExpression(currentText)
-            val resultInt = result.toInt()
-            resultTextView.text = Editable.Factory.getInstance().newEditable(resultInt.toString())
+
+            // Jika hasilnya bilangan bulat, tampilkan tanpa koma, jika bukan, tampilkan dengan koma
+            val formattedResult = if (result % 1 == 0.0) {
+                result.toInt().toString() // Tampilkan tanpa desimal jika hasilnya bilangan bulat
+            } else {
+                result.toString() // Tampilkan hasil dengan desimal
+            }
+
+            resultTextView.text = Editable.Factory.getInstance().newEditable(formattedResult)
         } catch (e: Exception) {
             editText.setText("Error: ${e.message}")
         }
     }
 
     // Evaluasi ekspresi matematika menggunakan ekspresi builder
-    private fun evaluateExpression(expression: String): Int {
-        return ExpressionBuilder(expression).build().evaluate().toInt()
+    private fun evaluateExpression(expression: String): Double {
+        return ExpressionBuilder(expression).build().evaluate()
     }
 
     // Navigasi ke MainActivity

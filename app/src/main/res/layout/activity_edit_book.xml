@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel"
+            app:title="Edit Buku"
+            app:titleTextColor="#3F51B5" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:cardCornerRadius="70dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/ivEditPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_launcher_background"
+                        android:scaleType="centerCrop" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEditPickImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih Gambar"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:textColor="#3F51B5"
+                    app:strokeColor="#3F51B5"
+                    app:icon="@android:drawable/ic_menu_gallery"
+                    app:iconTint="#3F51B5" />
+            </LinearLayout>
+
+            <!-- Nama Buku field with fixed icon alignment -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:startIconDrawable="@android:drawable/ic_menu_edit"
+                app:startIconTint="#3F51B5"
+                app:startIconContentDescription="Nama Buku"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#3F51B5"
+                app:hintTextColor="#3F51B5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEditNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Buku"
+                    android:inputType="text"
+                    android:paddingStart="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Nama Panggilan field with fixed icon alignment -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:startIconDrawable="@android:drawable/ic_menu_sort_alphabetically"
+                app:startIconTint="#3F51B5"
+                app:startIconContentDescription="Nama Panggilan"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#3F51B5"
+                app:hintTextColor="#3F51B5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEditNamaPanggilan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Panggilan"
+                    android:inputType="text"
+                    android:paddingStart="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Email field with fixed icon alignment -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:startIconDrawable="@android:drawable/ic_dialog_email"
+                app:startIconTint="#3F51B5"
+                app:startIconContentDescription="Email"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#3F51B5"
+                app:hintTextColor="#3F51B5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEditEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Alamat field with fixed icon alignment -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:startIconDrawable="@android:drawable/ic_menu_mylocation"
+                app:startIconTint="#3F51B5"
+                app:startIconContentDescription="Alamat"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#3F51B5"
+                app:hintTextColor="#3F51B5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEditAlamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Alamat"
+                    android:inputType="text"
+                    android:paddingStart="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Tanggal Lahir field with fixed icon alignment -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:startIconDrawable="@android:drawable/ic_menu_my_calendar"
+                app:startIconTint="#3F51B5"
+                app:startIconContentDescription="Tanggal Lahir"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#3F51B5"
+                app:hintTextColor="#3F51B5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEditTglLahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tanggal Lahir"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:paddingStart="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- No HP field with fixed icon alignment -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:startIconDrawable="@android:drawable/ic_menu_call"
+                app:startIconTint="#3F51B5"
+                app:startIconContentDescription="No HP"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#3F51B5"
+                app:hintTextColor="#3F51B5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEditNoHp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="No. HP (WA)"
+                    android:inputType="phone"
+                    android:paddingStart="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdateBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UPDATE BUKU"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="16dp"
+                android:paddingVertical="12dp"
+                app:cornerRadius="4dp"
+                android:backgroundTint="@android:color/holo_blue_dark" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

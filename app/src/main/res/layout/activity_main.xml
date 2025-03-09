@@ -215,6 +215,7 @@
 
                <!-- Item 3: Icon + Text -->
                <LinearLayout
+                   android:id="@+id/item_3"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:orientation="horizontal"
@@ -229,7 +230,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sed auctor felis non diam dignissim, et tristique ipsum lacinia. Nulla et erat convallis, tincidunt leo ac, viverra ipsum. Quisque at quam malesuada."
+                        android:text="Book"
                         android:textSize="14sp"
                         android:textColor="@android:color/black" />
                </LinearLayout>

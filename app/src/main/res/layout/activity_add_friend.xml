@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Input Nama -->
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Teman"
+        android:textColorHint="#808080"
+        android:textColor="@android:color/black"
+        android:padding="16dp"
+        android:background="@drawable/edit_text_background"/>
+
+    <!-- Input Tanggal Lahir -->
+    <EditText
+        android:id="@+id/etBirthDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Tanggal Lahir (YYYY-MM-DD)"
+        android:textColorHint="#808080"
+        android:textColor="@android:color/black"
+        android:padding="16dp"
+        android:focusable="false"
+        android:clickable="true"
+        android:background="@drawable/edit_text_background"/>
+
+    <!-- Tombol Pilih Gambar -->
+    <Button
+        android:id="@+id/btnPickImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pilih Gambar"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_green_dark"/>
+
+    <!-- Preview Gambar -->
+    <ImageView
+        android:id="@+id/ivPreviewImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:background="@android:color/darker_gray"/>
+
+    <!-- Tombol Simpan -->
+    <Button
+        android:id="@+id/btnSaveFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Simpan Teman"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
+
+</LinearLayout>
